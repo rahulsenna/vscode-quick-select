@@ -188,9 +188,9 @@ function switchQuotes() {
     doc.getText()
   })
   // restore orignal selection
-  console.log(original_sel)
+  // console.log(original_sel)
   editor.selections = original_sel;
-  console.log(editor.selections)
+  // console.log(editor.selections)
 }
 interface MatchingSelectOptions { start_char: string, end_char: string, outer?: boolean }
 function matchingSelect({start_char, end_char, outer = false}: MatchingSelectOptions) {
@@ -210,6 +210,9 @@ function matchingSelect({start_char, end_char, outer = false}: MatchingSelectOpt
     let start_index = starts.indexOf(start);
     let end_index = ends.indexOf(end);
     let start_pos: vscode.Position = findPrevious(doc, line, start_char, character, end_char) || new vscode.Position(line, starts[start_index]);
+    if (start_pos.character === undefined)
+      start_pos = findNext(doc, start_pos.line, start_char);
+    
     if (!start_pos) { return s };
     let end_pos: vscode.Position = findNext(doc, start_pos.line, end_char, start_pos.character + 1, start_char);
     if (start_pos && end_pos) {

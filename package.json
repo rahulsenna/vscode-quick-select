@@ -1,5 +1,5 @@
 {
-  "name": "vscode-quick-select",
+  "name": "vscode-quick-select-personal",
   "displayName": "Quick and Simple Text Selection (personal)",
   "description": "Jump to select between quote, brackets, tags, etc",
   "version": "0.2.10",

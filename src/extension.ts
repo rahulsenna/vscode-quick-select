@@ -230,7 +230,7 @@ function matchingSelect({start_char, end_char, outer = false}: MatchingSelectOpt
     }
     return s;
   })
-  if (success && start_char === "<") {
-    vscode.commands.executeCommand("editor.action.addSelectionToNextFindMatch")
-  }
+  // if (success && start_char === "<") {
+    // vscode.commands.executeCommand("editor.action.addSelectionToNextFindMatch")
+  // }
 }

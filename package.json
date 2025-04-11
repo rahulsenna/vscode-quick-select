@@ -2,7 +2,7 @@
   "name": "vscode-quick-select-personal",
   "displayName": "Quick and Simple Text Selection (personal)",
   "description": "Jump to select between quote, brackets, tags, etc",
-  "version": "0.2.11",
+  "version": "0.2.13",
   "publisher": "rahulsinha",
   "engines": {
     "vscode": "^1.0.3"
@@ -181,7 +181,7 @@
   "devDependencies": {
     "typescript": "^2.0.3",
     "vscode": "^1.0.0",
-    "@types/node": "latest"
+    "@types/node": "22.14.0"
   },
   "repository": {
     "type": "git",
